@@ -1,9 +1,5 @@
 
 
-import subprocess
-import sys
-
-subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "tensorflow==2.20.0"])
 
 import tensorflow as tf 
 from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
@@ -73,4 +69,5 @@ if churn:
     st.write('Customer is likely to churn.')
 else:
     st.write('Customer is not likely to churn.')
+
 st.write(f'Churn probability: {prediction[0][0]:.2f}')
